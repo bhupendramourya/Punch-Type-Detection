@@ -17,7 +17,7 @@ This repository contains a real-time punch detection system that uses YOLOv7 for
 
 ## Repository Structure
 
-``plaintext
+```plaintext
 punch-detection/
 yolov7                              # YOLOv7 model and utilities
 ├── templates/                      # HTML templates for front-end
@@ -27,3 +27,19 @@ yolov7                              # YOLOv7 model and utilities
 ├── app.py                          # Flask application with SocketIO for real-time updates
 ├── requirements.txt                # List of required Python packages
 └── README.md                       # Documentation for this repository
+
+```
+## Setup Instructions
+# Prerequisites
+- Python 3.8+: Ensure Python is installed on your system.
+- Dependencies: Install required Python libraries.
+- YOLOv7 Weights: Download YOLOv7 pre-trained weights from the official repository.
+
+# installation
+# Set Up a Virtual Environment:
+  ```
+python -m venv venv
+source venv/bin/activate
+```
+
+
