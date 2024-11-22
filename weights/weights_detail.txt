@@ -1,1 +1,3 @@
+best_320.pt :  This model trained on image size of 320
 
+best_640.pt :  This model trained on image size of 640
