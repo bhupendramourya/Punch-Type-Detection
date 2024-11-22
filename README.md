@@ -20,8 +20,7 @@ This repository contains a real-time punch detection system that uses YOLOv7 for
 ```plaintext
 punch-detection/
 yolov7                              # YOLOv7 model and utilities
-├── templates/                      # HTML templates for front-end
-├── static/                         # Static assets like CSS, JS (if any)
+├── templates/                      # HTML templates for front-end                         
 ├── detection_stats.json            # JSON file for storing detection stats
 ├── analytics.py                    # Backend script for YOLOv7-based analytics
 ├── app.py                          # Flask application with SocketIO for real-time updates
@@ -51,7 +50,7 @@ pip install -r requirements.txt
 
 ### 1. analytics.py
 
-This file is responsible for running the YOLOv7 model for punch detection and generating real-time statistics. Below are its key components:
+This file runs the YOLOv7 model for punch detection and generating real-time statistics. Below are its key components:
 
 - Dependencies:
   
@@ -73,7 +72,7 @@ This file is responsible for running the YOLOv7 model for punch detection and ge
         - Saves stats to detection_stats.json every 100 frames.
           
     - save_stats(stats):
-    - 
+     
         - Writes the current detection stats into a JSON file for use by the Flask app.
   
 ### 2. app.py
@@ -81,7 +80,6 @@ This file is responsible for running the YOLOv7 model for punch detection and ge
 This file is a Flask application that serves as the back end for your real-time analytics dashboard.
 
 - Dependencies:
-
   
   - Flask: Used to set up the web server and render web pages.
   - Flask-SocketIO: Enables real-time communication with the client for live stats updates.
@@ -122,6 +120,6 @@ This file is a Flask application that serves as the back end for your real-time 
   
 - templates/index.html:
 
-    -The front-end of your dashboard (not included in the upload but can be customized to display stats in a visually appealing manner).
+    - The front-end template for the dashboard (customizable to display charts, graphs, etc.).
 
 
