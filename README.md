@@ -17,7 +17,7 @@ This repository contains a real-time punch detection system that uses YOLOv7 for
 
 ## Repository Structure
 
-```plaintext
+``plaintext
 punch-detection/
 yolov7                              # YOLOv7 model and utilities
 ├── templates/                      # HTML templates for front-end
@@ -27,6 +27,3 @@ yolov7                              # YOLOv7 model and utilities
 ├── app.py                          # Flask application with SocketIO for real-time updates
 ├── requirements.txt                # List of required Python packages
 └── README.md                       # Documentation for this repository
-
-
-
