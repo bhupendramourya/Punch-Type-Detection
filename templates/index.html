@@ -1,1 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punch Detection Stats</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .stat {
+            font-size: 36px;
+            font-weight: bold;
+            color: #4caf50;
+            margin: 20px 0;
+        }
+        .stat-description {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .footer {
+            font-size: 12px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Punch Detection Stats</h1>
+        <div class="stat-description">Jab Count</div>
+        <div class="stat" id="jabCount">Loading...</div>
+        <div class="stat-description">Uppercut Count</div>
+        <div class="stat" id="uppercutCount">Loading...</div>
+        <div class="footer">Updating every 1 second</div>
+    </div>
+
+    <!-- Include SocketIO script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
+    <script>
+        // Connect to the SocketIO server
+        const socket = io();
+
+        // Listen for updates from the backend
+        socket.on('update_stats', function(stats) {
+            // Log stats for debugging
+            console.log(stats);
+
+            // Safely update jab and uppercut counts
+            const jabCount = stats.jab !== undefined ? stats.jab : 0;
+            const uppercutCount = stats.upper_cut !== undefined ? stats.upper_cut : 0; // Updated key
+
+            document.getElementById('jabCount').textContent = jabCount;
+            document.getElementById('uppercutCount').textContent = uppercutCount;
+        });
+
+        // Handle connection to the server
+        socket.on('connect', function() {
+            console.log('Connected to the server');
+        });
+
+        // Handle disconnection from the server
+        socket.on('disconnect', function() {
+            console.log('Disconnected from the server');
+        });
+    </script>
+</body>
+</html>
 
