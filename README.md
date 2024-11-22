@@ -2,6 +2,11 @@
 
 This repository contains a real-time punch detection system that uses YOLOv7 for detecting punch types in video streams and visualizing the results via a web interface.
 
+
+
+[Result.webm](https://github.com/user-attachments/assets/5efd1451-1832-4ef1-8e35-c3a034673345)
+
+
 ## Features
 
 - **Real-time Punch Detection**: Uses YOLOv7 for detecting and classifying punches (e.g., jabs, uppercuts).
@@ -23,11 +28,5 @@ yolov7                              # YOLOv7 model and utilities
 ├── requirements.txt                # List of required Python packages
 └── README.md                       # Documentation for this repository
 
-Setup Instructions
-Prerequisites
-1. Python 3.8+: Ensure Python is installed on your system.
-2. Dependencies: Install required Python libraries.
-3. YOLOv7 Weights: Download YOLOv7 pre-trained weights from the official repository.
 
-## Installation
-Clone the Repository:
+
