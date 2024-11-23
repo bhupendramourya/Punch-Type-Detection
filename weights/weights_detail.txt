@@ -1,3 +1,9 @@
 best_640.pt :  This model trained on image size of 640
 
 url : https://drive.google.com/file/d/1r-wkNbOKEzCjgNhb-14mnvmFNIkWWHo0/view?usp=drivesdk
+
+
+
+best_320.pt : This model trained on image size of 320
+
+url : https://drive.google.com/file/d/1r1ty5kejjmGJRzx1Njd233qOb7qZTBfJ/view?usp=drivesdk
